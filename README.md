@@ -1,12 +1,19 @@
 Uniforms
 ========
 
-The missing helpers library for [Xamarin Forms](https://www.xamarin.com/forms).
+The missing helpers library for awesome [Xamarin Forms](https://www.xamarin.com/forms)!
+
+Why
+---
+
+There are [Xamarin-Forms-Labs](https://github.com/XLabs/Xamarin-Forms-Labs) and [Xamarin.Plugins](https://github.com/jamesmontemagno/Xamarin.Plugins) projects and probably some more but still some basic things are just missing out of box.
+
+So, we'll try to keep simple things simple and fill some gaps. Stay tuned! :)
 
 Install
 -------
 
-NuGet widget will appear soon.
+NuGet package will appear soon! Please keep calm.
 
 Untl then just clone repo, copy and references to your projects.
 
