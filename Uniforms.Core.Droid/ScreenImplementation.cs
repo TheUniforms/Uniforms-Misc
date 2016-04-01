@@ -7,6 +7,8 @@ namespace Uniforms.Core.Droid
 {
     public class ScreenImplementation : IScreen
     {
+        internal static void Init() {}
+
         #region IScreen implementation
 
         public Xamarin.Forms.Size Size
@@ -20,11 +22,6 @@ namespace Uniforms.Core.Droid
         readonly Xamarin.Forms.Size size;
 
         #endregion
-
-        public static void Init()
-        {
-            Screen.Init();
-        }
 
         public ScreenImplementation()
         {

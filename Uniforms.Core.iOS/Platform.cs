@@ -7,6 +7,10 @@ namespace Uniforms.Core.iOS
         public static void Init()
         {
             ScreenImplementation.Init();
+
+            LocalizeImplementation.Init();
+
+            Uniforms.Core.Plarform.Init();
         }
     }
 }

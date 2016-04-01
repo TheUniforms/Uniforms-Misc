@@ -11,12 +11,6 @@ namespace CoreSample
     public class CoreSample : Application
     {
         //
-        // Private members
-        //
-
-        Label screenSizeLabel;
-
-        //
         // Init platform
         //
 
@@ -38,35 +32,12 @@ namespace CoreSample
         }
 
         //
-        // App constructor
+        // Constructor
         //
 
         public CoreSample()
         {
-            screenSizeLabel = new Label {
-                HorizontalTextAlignment = TextAlignment.Center
-            };
-
-            MainPage = new ContentPage {                
-                Content = new StackLayout {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        },
-                        screenSizeLabel
-                    }
-                }
-            };
-
-            // Update content
-
-            var screenSize = Uniforms.Core.Screen.Size;
-
-            screenSizeLabel.Text = String.Format(
-                "Screen width = {0}\n Screen height = {1}",
-                screenSize.Width, screenSize.Height);
+            MainPage = new MainPage();
         }
 
         //

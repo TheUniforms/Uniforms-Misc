@@ -8,6 +8,8 @@ namespace Uniforms.Core.iOS
 {
     public class ScreenImplementation : IScreen
     {
+        internal static void Init() {}
+
         #region IScreen implementation
 
         public Xamarin.Forms.Size Size
@@ -21,11 +23,6 @@ namespace Uniforms.Core.iOS
         readonly Xamarin.Forms.Size size;
 
         #endregion
-
-        public static void Init()
-        {
-            Screen.Init();
-        }
 
         public ScreenImplementation()
         {
