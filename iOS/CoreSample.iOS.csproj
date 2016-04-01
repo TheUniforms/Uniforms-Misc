@@ -118,4 +118,9 @@
       <Name>Uniforms.Core.iOS</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Graphics\balloon.jpg" />
+    <BundleResource Include="Resources\Graphics\balloon%402x.jpg" />
+    <BundleResource Include="Resources\Graphics\balloon%403x.jpg" />
+  </ItemGroup>
 </Project>

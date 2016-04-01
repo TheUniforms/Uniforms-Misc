@@ -22,12 +22,12 @@ namespace CoreSample
         {
             #if __ANDROID__
             Xamarin.Forms.Forms.Init(context, bundle);
-            Uniforms.Core.Droid.Platform.Init();
+            Uniforms.Core.Droid.Utils.Init();
             #endif
 
             #if __IOS__
             Xamarin.Forms.Forms.Init();
-            Uniforms.Core.iOS.Platform.Init();
+            Uniforms.Core.iOS.Utils.Init();
             #endif
         }
 

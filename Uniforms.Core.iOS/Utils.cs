@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Uniforms.Core.Droid
+namespace Uniforms.Core.iOS
 {
-    public static class Platform
+    public static class Utils
     {
         public static void Init()
         {
@@ -10,7 +10,9 @@ namespace Uniforms.Core.Droid
 
             LocalizeImplementation.Init();
 
-            Uniforms.Core.Plarform.Init();
+            ImageUtilsImplementation.Init();
+
+            Uniforms.Core.Utils.Init();
         }
     }
 }

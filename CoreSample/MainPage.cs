@@ -3,37 +3,16 @@ using Xamarin.Forms;
 
 namespace CoreSample
 {
-    using Plarform = Uniforms.Core.Plarform;
-
-    public class MainPage : ContentPage
+    public class MainPage : TabbedPage
     {
         public MainPage()
         {
-            var screenSize = Plarform.ScreenSize;
-            var cultureInfo = Plarform.GetCurrentCultureInfo();
+            Title = "Uniforms.Core";
 
-            Content = new StackLayout {
-                VerticalOptions = LayoutOptions.Center,
-                Children = {
-                    new Label {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "Welcome to Xamarin Forms!"
-                    },
-                    new Label {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = String.Format(
-                            "Screen width = {0}\n Screen height = {1}",
-                            screenSize.Width, screenSize.Height)
-                    },
-                    new Label {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = String.Format("Culture info = {0}", cultureInfo)
-                    },
-                }
-            };
+            Children.Add(new Page1());
+            Children.Add(new Page2());
         }
-
-
     }
 }
+
 

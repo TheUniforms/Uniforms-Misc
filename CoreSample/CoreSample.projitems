@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)CoreSample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page2.cs" />
   </ItemGroup>
 </Project>
