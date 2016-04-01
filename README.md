@@ -20,22 +20,24 @@ https://github.com/TheUniforms/Uniforms-Core/blob/master/CoreSample/CoreSample.c
 1. Init utilities right after `Forms.Init()`:
 
 
-On Android:
+    On **Android**:
 
-```csharp
-Uniforms.Core.Droid.Utils.Init();
-```
+    ```csharp
+    Uniforms.Core.Droid.Utils.Init();
+    ```
 
-On iOS:
+    On **iOS**:
 
-```csharp
-Uniforms.Core.iOS.Utils.Init();
-```
+    ```csharp
+    Uniforms.Core.iOS.Utils.Init();
+    ```
 
 2. Then use `Uniforms.Core.Utils` in your cross-platform code!
 
 Quick reference
 ---------------
+
+All interface is provided via single static class `Uniforms.Core.Utils`.
 
 ## Get screen size
 
