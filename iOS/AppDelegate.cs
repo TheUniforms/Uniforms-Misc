@@ -12,9 +12,9 @@ namespace CoreSample.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            App.InitPlatform();
+            CoreSample.InitPlatform();
 
-            var sharedApp = new App();
+            var sharedApp = new CoreSample();
 
             LoadApplication(sharedApp);
 

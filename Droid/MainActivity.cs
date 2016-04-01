@@ -17,9 +17,9 @@ namespace CoreSample.Droid
         {
             base.OnCreate(savedInstanceState);
 
-            App.InitPlatform(this, savedInstanceState);
+            CoreSample.InitPlatform(this, savedInstanceState);
 
-            LoadApplication(new App());
+            LoadApplication(new CoreSample());
         }
     }
 }

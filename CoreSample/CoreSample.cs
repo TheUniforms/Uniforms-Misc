@@ -8,7 +8,7 @@ namespace CoreSample
     using Bundle = Android.OS.Bundle;
     #endif
 
-    public class App : Application
+    public class CoreSample : Application
     {
         //
         // Private members
@@ -28,11 +28,11 @@ namespace CoreSample
         {
             #if __ANDROID__
             Xamarin.Forms.Forms.Init(context, bundle);
-            #else
-            Xamarin.Forms.Forms.Init();
+            Uniforms.Core.Droid.Platform.Init();
             #endif
 
             #if __IOS__
+            Xamarin.Forms.Forms.Init();
             Uniforms.Core.iOS.Platform.Init();
             #endif
         }
@@ -41,7 +41,7 @@ namespace CoreSample
         // App constructor
         //
 
-        public App()
+        public CoreSample()
         {
             screenSizeLabel = new Label {
                 HorizontalTextAlignment = TextAlignment.Center
