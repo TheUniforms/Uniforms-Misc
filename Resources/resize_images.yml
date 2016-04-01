@@ -4,25 +4,25 @@ base: 3.0
 imagemagic: true
 
 resizes:
-  # - dst: ../Droid/Resources/drawable
-  #   scale: 1.0
-  #   name_format: "{name}.{ext}"
-  #   nohyphens: true
+  - dst: ../Droid/Resources/drawable
+    scale: 1.0
+    name_format: "{name}.{ext}"
+    nohyphens: true
 
-  # - dst: ../Droid/Resources/drawable-hdpi
-  #   scale: 1.5
-  #   name_format: "{name}.{ext}"
-  #   nohyphens: true
+  - dst: ../Droid/Resources/drawable-hdpi
+    scale: 1.5
+    name_format: "{name}.{ext}"
+    nohyphens: true
 
-  # - dst: ../Droid/Resources/drawable-xhdpi
-  #   scale: 2.25
-  #   name_format: "{name}.{ext}"
-  #   nohyphens: true
+  - dst: ../Droid/Resources/drawable-xhdpi
+    scale: 2.25
+    name_format: "{name}.{ext}"
+    nohyphens: true
 
-  # - dst: ../Droid/Resources/drawable-xxhdpi
-  #   scale: 3.0
-  #   name_format: "{name}.{ext}"
-  #   nohyphens: true
+  - dst: ../Droid/Resources/drawable-xxhdpi
+    scale: 3.0
+    name_format: "{name}.{ext}"
+    nohyphens: true
 
   - dst: ../iOS/Resources/Graphics
     scale: 1.0

@@ -93,6 +93,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\balloon.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\balloon.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon.jpg" />
   </ItemGroup>
   <Import Project="..\CoreSample\CoreSample.projitems" Label="Shared" Condition="Exists('..\CoreSample\CoreSample.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -10,6 +10,8 @@ namespace Uniforms.Core.Droid
 
             LocalizeImplementation.Init();
 
+            ImageUtilsImplementation.Init();
+
             Uniforms.Core.Utils.Init();
         }
     }

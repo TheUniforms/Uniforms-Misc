@@ -77,6 +77,7 @@
     <Compile Include="ScreenImplementation.cs" />
     <Compile Include="LocalizeImplementation.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="ImageUtilsImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
