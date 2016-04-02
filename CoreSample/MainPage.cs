@@ -11,6 +11,7 @@ namespace CoreSample
 
             Children.Add(new Page1());
             Children.Add(new Page2());
+            Children.Add(new Page3());
         }
     }
 }
