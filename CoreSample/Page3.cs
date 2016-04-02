@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Xamarin.Forms;
 
 namespace CoreSample
@@ -8,6 +9,8 @@ namespace CoreSample
 
     public class Page3 : ContentPage
     {
+        const double resizedImageSize = 300;
+
         Image takenImage;
 
         public Page3()
@@ -56,9 +59,11 @@ namespace CoreSample
                     }
                         
                     var imageSource = ImageSource.FromStream(() => {
-                        var stream = mediaFile.GetStream();
+                        var origStream = mediaFile.GetStream();
+                        var resizedStream = GetResizedImageStream(mediaFile.GetStream());
+                        origStream.Dispose();
                         mediaFile.Dispose();
-                        return stream;
+                        return resizedStream;
                     });
 
                     takenImage = new Image {
@@ -69,6 +74,12 @@ namespace CoreSample
                     layout.Children.Add(takenImage);
                 }
             }
+        }
+
+        static Stream GetResizedImageStream(Stream imageStream)
+        {
+            return Uniforms.Core.Utils.ResizeImage(
+                imageStream, resizedImageSize, resizedImageSize);
         }
     }
 }

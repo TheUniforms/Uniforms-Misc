@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Globalization;
 using Xamarin.Forms;
 
@@ -37,6 +38,13 @@ namespace Uniforms.Core
         public static Size GetImageSize(string name)
         {
             return imageUtils.GetImageSize(name);
+        }
+
+        public static Stream ResizeImage(Stream imageStream, double width, double height,
+            string format = "jpeg", int quality = 96)
+        {
+            return imageUtils.ResizeImage(imageStream, width, height,
+                format: format, quality: quality);
         }
     }
 }
