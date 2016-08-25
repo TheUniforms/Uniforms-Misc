@@ -13,9 +13,10 @@ So, we'll try to keep simple things simple and fill some gaps. Stay tuned! :)
 Install
 -------
 
-NuGet package will appear soon! Please keep calm.
+`Uniforms.Core` package in available via NuGet:  
+https://www.nuget.org/packages/Uniforms.Core/
 
-Untl then just clone repo, copy and references to your projects.
+Alternitavely, you may just clone this repo and references to your projects.
 
 Usage
 -----
