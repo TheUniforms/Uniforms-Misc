@@ -36,8 +36,12 @@ namespace CoreSample
                         HorizontalOptions = LayoutOptions.Center,
                         HeightRequest = 50,
                         WidthRequest = 50,
-                        BackgroundColor=Color.Purple,
-                        CornerRadius=10
+                        BackgroundColor = Color.Purple,
+                        CornerRadius = 10,
+
+                        ShadowOffset = new Size(0, 2.0),
+                        ShadowOpacity = 0.5,
+                        ShadowRadius = 2.0,
                     },
                 }
             };

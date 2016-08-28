@@ -4,6 +4,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Uniforms.Core;
 using Uniforms.Core.iOS;
+using CoreGraphics;
+using CoreAnimation;
+using UIKit;
 
 [assembly: ExportRenderer (typeof (RoundedBox), typeof (RoundedBoxRenderer))]
 
@@ -11,13 +14,21 @@ namespace Uniforms.Core.iOS
 {
     public class RoundedBoxRenderer : BoxRenderer
     {
+        /// <summary>
+        /// The color layer.
+        /// </summary>
+        CALayer colorLayer = new CALayer { MasksToBounds = true };
+
         protected override void OnElementChanged (ElementChangedEventArgs<BoxView> e)
         {
             base.OnElementChanged (e);
 
             if (Element != null) {
-                Layer.MasksToBounds = true;
-                UpdateCornerRadius (Element as RoundedBox);
+                Layer.MasksToBounds = false;
+                Layer.BackgroundColor = Color.Transparent.ToCGColor ();
+                Layer.AddSublayer (colorLayer);
+                UpdateLayers ();
+                UpdateColor ();
             }
         }
 
@@ -25,14 +36,48 @@ namespace Uniforms.Core.iOS
         {
             base.OnElementPropertyChanged (sender, e);
 
-            if (e.PropertyName == RoundedBox.CornerRadiusProperty.PropertyName) {
-                UpdateCornerRadius (Element as RoundedBox);
+            if (e.PropertyName == RoundedBox.CornerRadiusProperty.PropertyName || 
+                e.PropertyName == RoundedBox.ShadowRadiusProperty.PropertyName) {
+                UpdateLayers ();
+            } else if (e.PropertyName == VisualElement.BackgroundColorProperty.PropertyName) {
+                UpdateColor ();
             }
         }
 
-        void UpdateCornerRadius (RoundedBox box)
+        void UpdateColor ()
         {
-            Layer.CornerRadius = (float)box.CornerRadius;
+            colorLayer.BackgroundColor = Element.BackgroundColor.ToCGColor ();
+        }
+
+        void UpdateLayers ()
+        {
+            var box = Element as RoundedBox;
+
+            colorLayer.CornerRadius = (float)box.CornerRadius;
+
+            if (box.ShadowRadius > 0) {
+                Layer.ShadowRadius = (float)box.ShadowRadius;
+                Layer.ShadowOpacity = (float)box.ShadowOpacity;
+                Layer.ShadowColor = box.ShadowColor.ToCGColor ();
+                Layer.ShadowOffset = box.ShadowOffset.ToSizeF ();
+            }
+        }
+
+        public override void LayoutSubviews ()
+        {
+            base.LayoutSubviews ();
+
+            colorLayer.Frame = Layer.Bounds;
+
+            var box = Element as RoundedBox;
+            if (box.ShadowRadius > 0) {
+                Layer.ShadowPath = UIBezierPath.FromRoundedRect (
+                    Layer.Bounds, (float)box.CornerRadius).CGPath;
+            }
+        }
+
+        public override void Draw (CGRect rect)
+        {
         }
     }
 }
