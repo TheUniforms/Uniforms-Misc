@@ -4,6 +4,7 @@ using Xamarin.Forms;
 namespace CoreSample
 {
     using Utils = Uniforms.Core.Utils;
+    using RoundedBox = Uniforms.Core.RoundedBox;
 
     public class Page1 : ContentPage
     {
@@ -30,6 +31,13 @@ namespace CoreSample
                     new Label {
                         HorizontalTextAlignment = TextAlignment.Center,
                         Text = String.Format("Culture info = {0}", cultureInfo)
+                    },
+                    new RoundedBox {
+                        HorizontalOptions = LayoutOptions.Center,
+                        HeightRequest = 50,
+                        WidthRequest = 50,
+                        BackgroundColor=Color.Purple,
+                        CornerRadius=10
                     },
                 }
             };
