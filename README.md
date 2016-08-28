@@ -64,3 +64,19 @@ var cultureInfo = Uniforms.Core.Utils.GetCurrentCultureInfo();
 ```csharp
 var imageSize = Uniforms.Core.Utils.GetImageSize("Graphics/icon.png");
 ```
+
+## Rounded box view
+
+```csharp
+var box = new RoundedBox {
+    HeightRequest = 50,
+    WidthRequest = 50,
+    BackgroundColor = Color.Purple,
+    CornerRadius = 10,
+    ShadowOffset = new Size(0, 2.0),
+    ShadowOpacity = 0.5,
+    ShadowRadius = 2.0,
+};
+```
+
+<img src="./Screenshots/Screenshot1.png">
