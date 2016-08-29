@@ -60,6 +60,8 @@ namespace Uniforms.Core.iOS
                 Layer.ShadowOpacity = (float)box.ShadowOpacity;
                 Layer.ShadowColor = box.ShadowColor.ToCGColor ();
                 Layer.ShadowOffset = box.ShadowOffset.ToSizeF ();
+            } else {
+                Layer.ShadowOpacity = 0;
             }
         }
 
@@ -70,7 +72,7 @@ namespace Uniforms.Core.iOS
             colorLayer.Frame = Layer.Bounds;
 
             var box = Element as RoundedBox;
-            if (box.ShadowRadius > 0) {
+            if (Layer.ShadowOpacity > 0) {
                 Layer.ShadowPath = UIBezierPath.FromRoundedRect (
                     Layer.Bounds, (float)box.CornerRadius).CGPath;
             }

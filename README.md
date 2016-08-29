@@ -79,4 +79,4 @@ var box = new RoundedBox {
 };
 ```
 
-<img src="./Screenshots/Screenshot1.png">
+<img src="./Screenshots/Screenshot1.png" style="border: 1px solid #eee;">

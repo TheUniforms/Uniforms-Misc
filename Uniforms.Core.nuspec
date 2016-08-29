@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Uniforms.Core</id>
-    <version>0.1.1</version>
+    <version>0.1.4</version>
     <title>Uniforms.Core - helpers for Xamarin.Forms</title>
     <authors>Alexey Kinëv</authors>
     <owners>Alexey Kinëv</owners>
@@ -14,6 +14,7 @@ Available utilities:
 - Get current culture info
 - Get image size by path
 - The very basic image resize
+- Box view with rounded corners + shadow support on iOS
 
 Details and samples are available on the project's website:
 https://github.com/TheUniforms/Uniforms-Core</description>
