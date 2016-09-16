@@ -14,5 +14,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Page2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Page3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page4.cs" />
   </ItemGroup>
 </Project>

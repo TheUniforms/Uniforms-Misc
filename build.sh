@@ -80,5 +80,8 @@ if [ "$build_nuget" = true ] ; then
 
     "$NUGET_TOOL" pack -OutputDirectory $OUTPUT_DIR
 
-    echo "Use nuget tool to publish the package."
+    echo "Use nuget tool to publish the package:"
+    echo
+    echo "    nuget push $OUTPUT_DIR/$PROJECT_BASE.*.nupkg"
+    echo
 fi

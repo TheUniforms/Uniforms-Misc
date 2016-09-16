@@ -28,6 +28,7 @@ namespace CoreSample
             #if __IOS__
             Xamarin.Forms.Forms.Init();
             Uniforms.Core.iOS.Utils.Init();
+            Uniforms.Core.iOS.KeyboardEvents.Init ();
             #endif
         }
 
