@@ -53,6 +53,15 @@ All interface is provided via single static class `Uniforms.Core.Utils`.
 var screenSize = Uniforms.Core.Utils.ScreenSize;
 ```
 
+## Handle keyboard change events
+
+```csharp
+var keyboardEvents = DependencyService.Get<IKeyboardEvents> ();
+keyboardEvents.KeyboardHeightChanged += (height) => {
+    Debug.WriteLine ($"KeyboardHeightChanged: {height}");
+};
+```
+
 ## Get current locale and culture info
 
 ```csharp
