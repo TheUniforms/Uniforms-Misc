@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
 using Xamarin.Forms;
-using Uniforms.Core;
+using Uniforms.Misc;
 
 namespace CoreSample
 {
     public class Page4 : ContentPage
     {
-        IKeyboardEvents keyboardEvents;
-
         Label label;
 
         public Page4 ()
         {
             Title = "Keyboard";
 
-            keyboardEvents = DependencyService.Get<IKeyboardEvents> ();
-            keyboardEvents.KeyboardHeightChanged += OnKeyboardHeightChanged;
+            KeyboardUtils.KeyboardHeightChanged += OnKeyboardHeightChanged;
 
             label = new Label {
                 Text = "Keyboard is hidden"

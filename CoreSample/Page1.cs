@@ -1,19 +1,21 @@
 ﻿using System;
 using Xamarin.Forms;
+using Uniforms.Misc;
 
 namespace CoreSample
 {
-    using Utils = Uniforms.Core.Utils;
-    using RoundedBox = Uniforms.Core.RoundedBox;
-
     public class Page1 : ContentPage
     {
         public Page1()
         {
             Title = "Welcome";
 
-            var screenSize = Utils.ScreenSize;
-            var cultureInfo = Utils.GetCurrentCultureInfo();
+            var screenSize = ScreenUtils.ScreenSize;
+
+            var fontSize = 32.0;
+            var testText = "La-la-la\nHa-ha-ha!";
+            var textSize = TextUtils.GetTextSize (
+                testText, screenSize.Width, fontSize);
 
             Content = new StackLayout {
                 VerticalOptions = LayoutOptions.Center,
@@ -30,7 +32,12 @@ namespace CoreSample
                     },
                     new Label {
                         HorizontalTextAlignment = TextAlignment.Center,
-                        Text = String.Format("Culture info = {0}", cultureInfo)
+                        FontSize = fontSize,
+                        Text = testText
+                    },
+                    new Label {
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        Text = $"(text height = {textSize.Height})"
                     },
                     new RoundedBox {
                         HorizontalOptions = LayoutOptions.Center,

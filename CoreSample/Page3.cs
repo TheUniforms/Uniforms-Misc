@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Xamarin.Forms;
+using Uniforms.Misc;
 
 namespace CoreSample
 {
@@ -78,7 +79,7 @@ namespace CoreSample
 
         static Stream GetResizedImageStream(Stream imageStream)
         {
-            return Uniforms.Core.Utils.ResizeImage(
+            return ImageUtils.ResizeImage(
                 imageStream, resizedImageSize, resizedImageSize);
         }
     }

@@ -13,8 +13,8 @@ So, we'll try to keep simple things simple and fill some gaps. Stay tuned! :)
 Install
 -------
 
-`Uniforms.Core` package is available via NuGet:  
-https://www.nuget.org/packages/Uniforms.Core/
+`Uniforms.Misc` package is available via NuGet:  
+https://www.nuget.org/packages/Uniforms.Misc/
 
 Alternitavely, you may just clone this repo and references to your projects.
 
@@ -31,26 +31,26 @@ https://github.com/TheUniforms/Uniforms-Core/blob/master/CoreSample/CoreSample.c
     On **Android**:
 
     ```csharp
-    Uniforms.Core.Droid.Utils.Init();
+    Uniforms.Misc.Droid.Utils.Init();
     ```
 
     On **iOS**:
 
     ```csharp
-    Uniforms.Core.iOS.Utils.Init();
+    Uniforms.Misc.iOS.Utils.Init();
     ```
 
-2. Then use `Uniforms.Core.Utils` in your cross-platform code!
+2. Then use `Uniforms.Misc.Utils` in your cross-platform code!
 
 Quick reference
 ---------------
 
-All interface is provided via single static class `Uniforms.Core.Utils`.
+All interface is provided via single static class `Uniforms.Misc.Utils`.
 
 ## Get screen size
 
 ```csharp
-var screenSize = Uniforms.Core.Utils.ScreenSize;
+var screenSize = Uniforms.Misc.Utils.ScreenSize;
 ```
 
 ## Handle keyboard change events
@@ -65,13 +65,13 @@ keyboardEvents.KeyboardHeightChanged += (height) => {
 ## Get current locale and culture info
 
 ```csharp
-var cultureInfo = Uniforms.Core.Utils.GetCurrentCultureInfo();
+var cultureInfo = Uniforms.Misc.Utils.GetCurrentCultureInfo();
 ```
 
 ## Get image size by file name
 
 ```csharp
-var imageSize = Uniforms.Core.Utils.GetImageSize("Graphics/icon.png");
+var imageSize = Uniforms.Misc.Utils.GetImageSize("Graphics/icon.png");
 ```
 
 ## Rounded box view

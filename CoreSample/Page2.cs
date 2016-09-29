@@ -1,10 +1,9 @@
 ﻿using System;
 using Xamarin.Forms;
+using Uniforms.Misc;
 
 namespace CoreSample
 {
-    using Utils = Uniforms.Core.Utils;
-
     public class Page2 : ContentPage
     {
         public Page2()
@@ -12,7 +11,7 @@ namespace CoreSample
             Title = "Images";
 
             const string imageName = "Graphics/balloon.jpg";
-            var imageSize = Utils.GetImageSize(imageName);
+            var imageSize = ImageUtils.GetImageSize(imageName);
 
             Content = new StackLayout {
                 VerticalOptions = LayoutOptions.Center,

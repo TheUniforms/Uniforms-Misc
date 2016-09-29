@@ -7,7 +7,7 @@ namespace CoreSample
     {
         public MainPage()
         {
-            Title = "Uniforms.Core";
+            Title = "Uniforms.Misc";
 
             Children.Add (new Page1 ());
             Children.Add (new Page2 ());

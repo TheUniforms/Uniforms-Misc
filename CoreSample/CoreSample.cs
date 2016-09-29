@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Uniforms.Misc;
 
 namespace CoreSample
 {
@@ -22,13 +23,17 @@ namespace CoreSample
         {
             #if __ANDROID__
             Xamarin.Forms.Forms.Init(context, bundle);
-            Uniforms.Core.Droid.Utils.Init();
+            Uniforms.Misc.Droid.ScreenUtils.Init ();
+            Uniforms.Misc.Droid.ImageUtils.Init ();
+            Uniforms.Misc.Droid.TextUtils.Init ();
             #endif
 
             #if __IOS__
             Xamarin.Forms.Forms.Init();
-            Uniforms.Core.iOS.Utils.Init();
-            Uniforms.Core.iOS.KeyboardEvents.Init ();
+            Uniforms.Misc.iOS.ScreenUtils.Init ();
+            Uniforms.Misc.iOS.ImageUtils.Init ();
+            Uniforms.Misc.iOS.KeyboardUtils.Init ();
+            Uniforms.Misc.iOS.TextUtils.Init ();
             #endif
         }
 

@@ -114,13 +114,13 @@
   <Import Project="..\CoreSample\CoreSample.projitems" Label="Shared" Condition="Exists('..\CoreSample\CoreSample.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Uniforms.Core\Uniforms.Core.csproj">
+    <ProjectReference Include="..\Uniforms.Misc\Uniforms.Misc.csproj">
       <Project>{97380917-62A3-44F2-8FEF-C92E0B68D317}</Project>
-      <Name>Uniforms.Core</Name>
+      <Name>Uniforms.Misc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Uniforms.Core.iOS\Uniforms.Core.iOS.csproj">
+    <ProjectReference Include="..\Uniforms.Misc.iOS\Uniforms.Misc.iOS.csproj">
       <Project>{D13A4CCA-6F79-4D18-9DA0-A37163C0BC55}</Project>
-      <Name>Uniforms.Core.iOS</Name>
+      <Name>Uniforms.Misc.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

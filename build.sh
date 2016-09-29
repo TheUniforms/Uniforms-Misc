@@ -7,7 +7,7 @@
 
 BUILD_TOOL='/Applications/Xamarin Studio.app/Contents/MacOS/mdtool'
 NUGET_TOOL=`which nuget`
-PROJECT_BASE='Uniforms.Core'
+PROJECT_BASE='Uniforms.Misc'
 OUTPUT_DIR='lib'
 
 build_nuget=false

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Uniforms.Misc</id>
+    <version>0.2</version>
+    <title>Uniforms.Misc - helpers for Xamarin.Forms</title>
+    <authors>Alexey Kinëv</authors>
+    <owners>Alexey Kinëv</owners>
+    <description>Various helpers to simplify cross-platform development with Xamarin.Forms.
+
+Available utilities:
+
+- Get device screen size
+- Get current culture info
+- Get image size by path
+- The very basic image resize
+- Box view with rounded corners + shadow support on iOS
+- Keyboard height change events on iOS
+
+Details and samples are available on the project's website:
+https://github.com/TheUniforms/Uniforms-Core</description>
+    <summary>Various helpers to simplify cross-platform development with Xamarin.Forms: device screen size, get image size, get current locale etc.</summary>
+    <projectUrl>https://github.com/TheUniforms/Uniforms-Core</projectUrl>
+    <licenseUrl>https://github.com/TheUniforms/Uniforms-Core/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Beta</releaseNotes>
+    <copyright>Copyright 2016, 05Bit</copyright>
+    <tags>xamarin, utils, pcl, xamarin.forms, ios</tags>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <!--Portable-->
+    <file src="lib/Uniforms.Misc.dll" target="lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10" />
+    <file src="lib/Uniforms.Misc.dll.mdb" target="lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10" />
+
+    <!--Xamarin.iOS-->
+    <file src="lib/Uniforms.Misc.dll" target="lib/xamarinios10" />
+    <file src="lib/Uniforms.Misc.iOS.dll" target="lib/xamarinios10" />
+    <file src="lib/Uniforms.Misc.iOS.dll.mdb" target="lib/xamarinios10" />
+
+    <!--Xamarin.Droid-->
+    <file src="lib/Uniforms.Misc.dll" target="lib/MonoAndroid10" />
+    <file src="lib/Uniforms.Misc.Droid.dll" target="lib/MonoAndroid10" />
+    <file src="lib/Uniforms.Misc.Droid.dll.mdb" target="lib/MonoAndroid10" />
+  </files>
+</package>
