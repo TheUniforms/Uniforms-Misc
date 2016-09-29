@@ -52,7 +52,7 @@ https://github.com/TheUniforms/Uniforms-Misc/blob/master/CoreSample/CoreSample.c
 Quick reference
 ---------------
 
-All interface is provided via static classes:
+Utils interface is provided via static classes:
 
 - `Uniforms.Misc.ScreenUtils`
 - `Uniforms.Misc.ImageUtils`
