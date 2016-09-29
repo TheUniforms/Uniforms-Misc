@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Uniforms.Misc</id>
-    <version>0.2</version>
-    <title>Uniforms.Misc - helpers for Xamarin.Forms</title>
+    <version>0.9.0</version>
+    <title>Uniforms.Misc - various helpers for Xamarin.Forms</title>
     <authors>Alexey Kinëv</authors>
     <owners>Alexey Kinëv</owners>
     <description>Various helpers to simplify cross-platform development with Xamarin.Forms.
@@ -11,17 +11,16 @@
 Available utilities:
 
 - Get device screen size
-- Get current culture info
 - Get image size by path
 - The very basic image resize
 - Box view with rounded corners + shadow support on iOS
 - Keyboard height change events on iOS
 
 Details and samples are available on the project's website:
-https://github.com/TheUniforms/Uniforms-Core</description>
+https://github.com/TheUniforms/Uniforms-Misc</description>
     <summary>Various helpers to simplify cross-platform development with Xamarin.Forms: device screen size, get image size, get current locale etc.</summary>
-    <projectUrl>https://github.com/TheUniforms/Uniforms-Core</projectUrl>
-    <licenseUrl>https://github.com/TheUniforms/Uniforms-Core/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/TheUniforms/Uniforms-Misc</projectUrl>
+    <licenseUrl>https://github.com/TheUniforms/Uniforms-Misc/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Beta</releaseNotes>
     <copyright>Copyright 2016, 05Bit</copyright>

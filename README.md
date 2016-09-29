@@ -22,7 +22,7 @@ Usage
 -----
 
 See example in `CoreSample` project:
-https://github.com/TheUniforms/Uniforms-Core/blob/master/CoreSample/CoreSample.cs#L20
+https://github.com/TheUniforms/Uniforms-Misc/blob/master/CoreSample/CoreSample.cs#L20
 
 
 1. Init utilities right after `Forms.Init()`:
