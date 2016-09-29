@@ -38,7 +38,7 @@ namespace Uniforms.Misc.Droid
         }
 
         public Stream ResizeImage(
-            Stream imageData,
+            Stream imageStream,
             double width,
             double height,
             string format = "jpeg",
@@ -48,32 +48,30 @@ namespace Uniforms.Misc.Droid
             var options = new BitmapFactory.Options {
                 InJustDecodeBounds = true
             };
-            BitmapFactory.DecodeStream(imageData, null, options);
-            imageData.Seek(0, SeekOrigin.Begin);
+            BitmapFactory.DecodeStream(imageStream, null, options);
+            imageStream.Seek(0, SeekOrigin.Begin);
 
             var width0 = options.OutWidth;
             var height0 = options.OutHeight;
 
             // No need to resize
-            if ((height >= height0) && (width >= width0))
-            {
-                return imageData;
+            if ((height >= height0) && (width >= width0)) {
+                return imageStream;
             }
 
             // Calculate scale and sample size
-            var scale = Math.Max(width / width0, height / height0);
+            var scale = Math.Min(width / width0, height / height0);
             width = width0 * scale;
             height = height0 * scale;
 
             var inSampleSize = 1;
             while ((0.5 * height0 > inSampleSize * height) &&
-                (0.5 * width0 > inSampleSize * width))
-            {
+                   (0.5 * width0 > inSampleSize * width)) {
                 inSampleSize *= 2;
             }
 
             // Resize
-            var originalImage = BitmapFactory.DecodeStream(imageData, null,
+            var originalImage = BitmapFactory.DecodeStream(imageStream, null,
                 new BitmapFactory.Options {
                 InJustDecodeBounds = false,
                 InSampleSize = inSampleSize

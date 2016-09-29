@@ -19,7 +19,7 @@ namespace CoreSample
             Title = "Resize";
 
             var getPhotoButton = new Button {
-                Text = "Tap to get photo",
+                Text = "Tap to pick a photo",
                 HorizontalOptions = LayoutOptions.Center
             };
             getPhotoButton.Clicked += GetPhotoButtonClicked;
@@ -36,19 +36,24 @@ namespace CoreSample
         {
             if (await CrossMedia.Current.Initialize())
             {
-                if (!CrossMedia.Current.IsCameraAvailable ||
-                    !CrossMedia.Current.IsTakePhotoSupported)
-                {
-                    await DisplayAlert("Error", "Sorry, can't connect to camera!", "OK");
+                //if (!CrossMedia.Current.IsCameraAvailable ||
+                //    !CrossMedia.Current.IsTakePhotoSupported)
+                //{
+                //    await DisplayAlert("Error", "Sorry, can't connect to camera!", "OK");
+                //    return;
+                //}
+
+                //var options = new MediaOptions {
+                //    Directory = "Temp",
+                //    Name = "photo.jpg"
+                //};
+
+                if (!CrossMedia.Current.IsPickPhotoSupported) {
+                    await DisplayAlert ("Error", "Sorry, can't pick a photo!", "OK");
                     return;
                 }
 
-                var options = new MediaOptions {
-                    Directory = "Temp",
-                    Name = "photo.jpg"
-                };
-
-                var mediaFile = await CrossMedia.Current.TakePhotoAsync(options);
+                var mediaFile = await CrossMedia.Current.PickPhotoAsync ();
 
                 if (mediaFile != null)
                 {
