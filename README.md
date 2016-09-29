@@ -31,47 +31,52 @@ https://github.com/TheUniforms/Uniforms-Misc/blob/master/CoreSample/CoreSample.c
     On **Android**:
 
     ```csharp
-    Uniforms.Misc.Droid.Utils.Init();
+    Xamarin.Forms.Forms.Init(context, bundle);
+    Uniforms.Misc.Droid.ScreenUtils.Init ();
+    Uniforms.Misc.Droid.ImageUtils.Init ();
+    Uniforms.Misc.Droid.TextUtils.Init ();
     ```
 
     On **iOS**:
 
     ```csharp
-    Uniforms.Misc.iOS.Utils.Init();
+    Xamarin.Forms.Forms.Init();
+    Uniforms.Misc.iOS.ScreenUtils.Init ();
+    Uniforms.Misc.iOS.ImageUtils.Init ();
+    Uniforms.Misc.iOS.KeyboardUtils.Init ();
+    Uniforms.Misc.iOS.TextUtils.Init ();
     ```
 
-2. Then use `Uniforms.Misc.Utils` in your cross-platform code!
+2. Then use `Uniforms.Misc.*` in your cross-platform code!
 
 Quick reference
 ---------------
 
-All interface is provided via single static class `Uniforms.Misc.Utils`.
+All interface is provided via static classes:
+
+- `Uniforms.Misc.ScreenUtils`
+- `Uniforms.Misc.ImageUtils`
+- `Uniforms.Misc.KeyboardUtils`
+- `Uniforms.Misc.TextUtils`
 
 ## Get screen size
 
 ```csharp
-var screenSize = Uniforms.Misc.Utils.ScreenSize;
+var screenSize = Uniforms.Misc.ScreenUtils.ScreenSize;
 ```
 
 ## Handle keyboard change events
 
 ```csharp
-var keyboardEvents = DependencyService.Get<IKeyboardEvents> ();
-keyboardEvents.KeyboardHeightChanged += (height) => {
+Uniforms.Misc.KeyboardUtils.KeyboardHeightChanged += (height) => {
     Debug.WriteLine ($"KeyboardHeightChanged: {height}");
 };
-```
-
-## Get current locale and culture info
-
-```csharp
-var cultureInfo = Uniforms.Misc.Utils.GetCurrentCultureInfo();
 ```
 
 ## Get image size by file name
 
 ```csharp
-var imageSize = Uniforms.Misc.Utils.GetImageSize("Graphics/icon.png");
+var imageSize = Uniforms.Misc.ImageUtils.GetImageSize("Graphics/icon.png");
 ```
 
 ## Rounded box view
