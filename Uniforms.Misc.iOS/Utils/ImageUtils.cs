@@ -25,9 +25,13 @@ namespace Uniforms.Misc.iOS
         {
             UIImage image = UIImage.FromFile(name);
 
-            return new Xamarin.Forms.Size(
+            var size = new Xamarin.Forms.Size(
                 (double)image.Size.Width,
                 (double)image.Size.Height);
+
+            image.Dispose ();
+
+            return size;
         }
             
         public Stream ResizeImage(
@@ -76,6 +80,9 @@ namespace Uniforms.Misc.iOS
             var resizeData = ((format == "png") ?
                               resized.AsPNG ().ToArray () :
                               resized.AsJPEG ((nfloat)(0.01 * quality)).ToArray ());
+
+            image.Dispose ();
+            resized.Dispose ();
 
             stream.Write (resizeData, 0, resizeData.Length);
             stream.Seek (0, SeekOrigin.Begin);

@@ -42,6 +42,9 @@ namespace Uniforms.Misc.iOS
                 attributes,
                 null).Size;
 
+            font.Dispose ();
+            nsText.Dispose ();
+
             return new Xamarin.Forms.Size (
                 Math.Ceiling ((double)resultSize.Width),
                 Math.Ceiling ((double)resultSize.Height));
