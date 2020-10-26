@@ -15,6 +15,8 @@ namespace Uniforms.Misc.Droid
 
         static Typeface textTypeface;
 
+        static string createdFontName;
+
         public Xamarin.Forms.Size GetTextSize (
             string text,
             double maxWidth,
@@ -45,8 +47,9 @@ namespace Uniforms.Misc.Droid
                 return Typeface.Default;
             }
 
-            if (textTypeface == null) {
+            if (textTypeface == null || fontName != createdFontName) {
                 textTypeface = Typeface.Create (fontName, TypefaceStyle.Normal);
+                createdFontName = fontName;
             }
 
             return textTypeface;
